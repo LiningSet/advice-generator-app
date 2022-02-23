@@ -1,0 +1,100 @@
+@import "./vars";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+  font-family: $font;
+}
+
+h1 {
+  font-weight: 800;
+}
+
+.desk-img {
+  display: none;
+}
+
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $Darker-Grayish-Blue;
+}
+
+main {
+  color: $Light-Cyan;
+  border-radius: 1rem;
+  padding: 1rem 1rem 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  background: $Dark-Grayish-Blue;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 2rem 2.5rem -1rem hsl(213, 19%, 11%);
+
+  > *:nth-child(1) {
+    color: $Neon-Green;
+    font-family: inherit;
+    letter-spacing: 5px;
+    font-size: 0.85rem;
+  }
+}
+
+.generate-btn {
+  height: 4rem;
+  width: 4rem;
+  background: $Neon-Green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  margin-bottom: -2rem;
+
+  &:hover {
+    box-shadow: 0 0 1.5rem $Neon-Green;
+  }
+}
+
+.imgs {
+  width: 100%;
+
+  img {
+    width: 75%;
+    margin-inline: auto;
+  }
+}
+
+@media (min-width: 770px) {
+  html {
+    font-size: 16px;
+  }
+
+  .desk-img {
+    display: block;
+  }
+  .mob-img {
+    display: none;
+  }
+
+  main {
+    padding: 2rem 2rem 0;
+    gap: 2rem;
+  }
+
+  .imgs img {
+    width: 100%;
+  }
+}
